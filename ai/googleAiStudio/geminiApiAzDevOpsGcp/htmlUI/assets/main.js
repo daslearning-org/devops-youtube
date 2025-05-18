@@ -1,5 +1,5 @@
 // The JS file to work with this API trigger for Azure DevOps Pipeline
-const pat = "<pat>"; // Put you PAT here
+const pat = "<pat>"; // Put your base64 encoded PAT here
 const azureOrg = "daslearning"; // Your DevOps Org
 const azDevOpsProj = "daslearningProject"; // Your DevOps Project
 

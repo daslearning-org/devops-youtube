@@ -24,6 +24,12 @@ steps:
       echo "........................."
       ls
 
+- task: TerraformInstaller@1
+  displayName: Install Terraform 1.5.7
+  name: installTf
+  inputs:
+    terraformVersion: 1.5.7
+
 - task: DownloadSecureFile@1
   name: gcpJson
   displayName: 'Download GCP Key file'
