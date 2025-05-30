@@ -18,7 +18,7 @@ prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model
 
 md_files = "./markdown_files"
-retriever = md_rag(source_directory=md_files, db_path="chroma_md_db", collection_name="law_files")
+retriever = md_rag(source_directory=md_files, db_path="chroma_md_db", collection_name="tech_files")
 print("Retriever ready.")
 
 while True:
@@ -28,6 +28,6 @@ while True:
     if question == "q":
         break
     
-    reviews = retriever.invoke(question)
-    result = chain.invoke({"reviews": reviews, "question": question})
+    docs = retriever.invoke(question)
+    result = chain.invoke({"documents": docs, "question": question})
     print(f"AI: {result}")
