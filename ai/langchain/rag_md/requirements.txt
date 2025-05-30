@@ -1,0 +1,5 @@
+langchain
+langchain-ollama
+langchain-chroma
+langchain-community
+unstructured[md]
