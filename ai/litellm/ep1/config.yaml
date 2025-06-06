@@ -4,6 +4,7 @@ model_list:
     litellm_params:
       model: gemini/gemini-2.0-flash
       api_key: os.environ/GEMINI_API_KEY
+      drop_params: true
 
   - model_name: "my-sample-llm"
     litellm_params:
