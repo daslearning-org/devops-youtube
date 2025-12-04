@@ -6,7 +6,6 @@ on:
   push:
     branches:
       - 'main'
-      - 'develop'
     paths:
       - 'github-devops/ep2-aws/cvHtml/**'
 
@@ -21,17 +20,17 @@ jobs:
         id: 'git-checkout'
         uses: "actions/checkout@v4"
 
-      - name: CI - Compile Your App
-        id: 'ci-compile'
-        run: |
-          cd ./github-devops/ep2-aws/cvHtml
-          sudo apt-get update -y
-          sudo apt-get install apache2 -y
-          sudo systemctl start apache2
-          sudo mv /var/www/html/index.html /var/www/html/index.html.bak
-          sudo cp -r . /var/www/html/
-          sudo systemctl restart apache2
-          echo ".....Apache2 installed and custom HTML deployed....."
+      #- name: CI - Compile Your App
+      #  id: 'ci-compile'
+      #  run: |
+      #    cd ./github-devops/ep2-aws/cvHtml
+      #    sudo apt-get update -y
+      #    sudo apt-get install apache2 -y
+      #    sudo systemctl start apache2
+      #    sudo mv /var/www/html/index.html /var/www/html/index.html.bak
+      #    sudo cp -r . /var/www/html/
+      #    sudo systemctl restart apache2
+      #    echo ".....Apache2 installed and custom HTML deployed....."
 
       - name: CI - Test App & Environment
         id: 'ci-test-app'
