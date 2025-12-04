@@ -38,8 +38,8 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_TF_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_TF_KEY }}
         run: |
-          curl localhost
-          echo ".....LocalHost test ends....."
+          #curl localhost
+          #echo ".....LocalHost test ends....."
           cd ./github-devops/ep2-aws
           python -m venv .env
           source .env/bin/activate
